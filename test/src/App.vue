@@ -1,32 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <Boodschappen v-bind:boodschappen="boodschappen"/>
   </div>
 </template>
 
 <script>
+import Boodschappen from './components/Boodschappen.vue'
+
 export default {
   name: 'App',
   components: {
-
+    Boodschappen
   },
   data() {
     return {
-      films: [
+      boodschappen: [
         {
           id: 1,
-          title: "film 1",
+          title: "Kiwi",
           completed: false
         },
         {
           id: 2,
-          title: "film 2",
-          completed: true
+          title: "Aardappel",
+          completed: false
         },
         {
           id: 3,
-          title: "film 3",
-          completed false
+          title: "Chocola",
+          completed: false
+        },
+        {
+          id: 4,
+          title: "Pasta",
+          completed: false
+        },
+        {
+          id: 5,
+          title: "Brood",
+          completed: false
         }
       ]
     }
@@ -35,14 +47,14 @@ export default {
 </script>
 
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
-  }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
 </style>
